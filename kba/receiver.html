@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Receiver Registration</title>
+</head>
+<body>
+    <div class="container silver-box">
+        <h1 style="color:green">Receiver Registration</h1>
+        
+        <form id="receiverForm">
+            <label for="receiverName">Full Name:</label>
+            <input type="text" id="receiverName" required>
+
+            <label for="receiverWallet">Wallet Address:</label>
+            <input type="text" id="receiverWallet" required>
+
+            <label for="receiverReason">Reason for Donation:</label>
+            <textarea id="receiverReason" required></textarea>
+
+            <label for="idProof">Upload ID Proof:</label>
+            <select id="idProofType" required>
+                <option value="">Select ID Proof</option>
+                <option value="Aadhar Card">Aadhar Card</option>
+                <option value="Driving License">Driving License</option>
+            </select>
+            <input type="file" id="idProofFile" accept=".pdf,.jpg,.png" required>
+
+            <button type="submit" class="button">Submit</button>
+        </form>
+        
+        <div id="verificationStatus" class="verification-status hidden">
+            <p>Account verified!</p>
+            <button id="searchDonors" class="button">Search Donors</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

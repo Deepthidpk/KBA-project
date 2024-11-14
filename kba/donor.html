@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Donor Dashboard</title>
+</head>
+<body>
+    <div class="container silver-box">
+        <h1 style="color:green">Welcome, Donor!</h1>
+        
+        <button id="connectMetaMask" class="button">Connect MetaMask</button>
+
+        <h2 style="color:green">Recent Donations</h2>
+        <table class="donation-table">
+            <thead>
+                <tr>
+                    <th>Donation ID</th>
+                    <th>Amount (ETH)</th>
+                    <th>Receiver</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>001</td>
+                    <td>0.20</td>
+                    <td>Charity A</td>
+                    <td>Oct 10</td>
+                    <td>Completed</td>
+                </tr>
+                <tr>
+                    <td>002</td>
+                    <td>0.30</td>
+                    <td>Charity B</td>
+                    <td>Oct 20</td>
+                    <td>Completed</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 style="color:green">Make a Donation</h2>
+        <div id="donation-form">
+            <label for="receiverAddress">Receiver Address:</label>
+            <select id="receiverAddress" required>
+                <option value="">Select Receiver</option>
+                <option value="0x123...abc">Charity A - 0x123...abc</option>
+                <option value="0x456...def">Charity B - 0x456...def</option>
+                <option value="0x789...ghi">Charity C - 0x789...ghi</option>
+            </select>
+
+            <label for="donationAmount">Donation Amount (ETH):</label>
+            <input type="number" id="donationAmount" step="0.01" required>
+
+            <button id="donateButton" class="button">Donate</button>
+            <a href="index.html" class="button">Home</a>
+        </div>
+   
+        <div id="donationPopup" class="popup hidden">
+            <div class="popup-content">
+                <p>Donation successful! Thank you for your generosity.</p>
+                <button id="closePopup" class="button">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
