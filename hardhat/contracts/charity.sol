@@ -65,5 +65,5 @@ contract CharityDonationApp {
     // Function to check contract balance (optional, for transparency)
     function getContractBalance() public view returns (uint256) {
         return address(this).balance;
-    }
+    }
 }
